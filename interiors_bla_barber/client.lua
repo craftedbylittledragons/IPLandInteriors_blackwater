@@ -14,6 +14,11 @@ end
 function EnableResouresINTERIORS(x, y, z)     
     --[[	
         [61698] = {x=-816.00012207031,y=-1366.9996337891,z=44.0,typeHashId=1624121669,typeHashName="bla_barber_int",rpf="bla_barber_int.rpf"},   
+    bla_barber_photo_dec.ydr
+    bla_barber_photo_dec+hidr.ytd
+    bla_barber_photo_em.ydr
+    bla_barber_photo.ydr
+    bla_barber_photo+hidr.ytd        
     --]]
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "bla_barber_int")       
@@ -28,7 +33,13 @@ function EnableResouresINTERIORS(x, y, z)
         ActivateInteriorEntitySet(interior, "bla_barber_int_shell_txd") 
         ActivateInteriorEntitySet(interior, "bla_barber_int_txd") 
         ActivateInteriorEntitySet(interior, "bla_bar_int_decals") 
-        ActivateInteriorEntitySet(interior, "bla_bar_int_halldc")         
+        ActivateInteriorEntitySet(interior, "bla_bar_int_halldc") 
+
+        ActivateInteriorEntitySet(interior, "bla_barber_photo_dec")  
+        ActivateInteriorEntitySet(interior, "bla_barber_photo_dec+hidr")  
+        ActivateInteriorEntitySet(interior, "bla_barber_photo_em")  
+        ActivateInteriorEntitySet(interior, "bla_barber_photo")  
+        ActivateInteriorEntitySet(interior, "bla_barber_photo+hidr")      
     end    
 end
 

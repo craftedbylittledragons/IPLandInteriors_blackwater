@@ -23,6 +23,9 @@ function EnableResouresINTERIORS(x, y, z)
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
     --]]
+    local interior = GetInteriorAtCoords(x, y, z) 
+    ActivateInteriorEntitySet(interior, "bla_saloon_int")        
+    ActivateInteriorEntitySet(interior, "bla_saloon_sadie5setdressing")    
 end
 
 -- currently there are two hitching posts. 
@@ -40,6 +43,9 @@ function DisableResourcesINTERIORS(x, y, z)
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
     --]]       
+    local interior = GetInteriorAtCoords(x, y, z) 
+    DeactivateInteriorEntitySet(interior, "bla_saloon_int")        
+    DeactivateInteriorEntitySet(interior, "bla_saloon_sadie5setdressing")    
 end    
  
  

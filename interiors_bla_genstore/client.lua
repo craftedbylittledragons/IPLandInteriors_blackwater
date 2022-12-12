@@ -4,8 +4,7 @@ local character_selected = false
 
 ----------- turn on the bar ------
 function EnableResouresIMAP()            
-    --[[ 
-    [61442] = {x=-782.50006103516,y=-1324.0,z=44.0,typeHashId=222488432,typeHashName="bla_genstore_int",rpf="bla_genstore_int.rpf"},
+    --[[  
     if Config.Unknow == true then
         RequestImap(_________________) -- Something relating to BizTemplate
     end     
@@ -14,136 +13,25 @@ end
 
 function EnableResouresINTERIORS(x, y, z)     
     --[[
-        61442 	222488432 	bla_genstore_int 	_p_apple01x_dressing
-        61442 	222488432 	bla_genstore_int 	_p_apple01x_group
-        61442 	222488432 	bla_genstore_int 	_p_carrots_01x_dressing
-        61442 	222488432 	bla_genstore_int 	_p_carrots_01x_group
-        61442 	222488432 	bla_genstore_int 	_p_cigar02x_dressing
-        61442 	222488432 	bla_genstore_int 	_p_cigar02x_group
-        61442 	222488432 	bla_genstore_int 	_p_cigarettebox01x_dressing
-        61442 	222488432 	bla_genstore_int 	_p_cigarettebox01x_group
-        61442 	222488432 	bla_genstore_int 	_p_int_fishing01_dressing
-        61442 	222488432 	bla_genstore_int 	_p_tin_pomade01x_dressing
-        61442 	222488432 	bla_genstore_int 	_p_tin_pomade01x_group
-        61442 	222488432 	bla_genstore_int 	_p_tin_soap01x_dressing
-        61442 	222488432 	bla_genstore_int 	_p_tin_soap01x_group
-        61442 	222488432 	bla_genstore_int 	_s_beardTonic01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_beardTonic01x_group
-        61442 	222488432 	bla_genstore_int 	_s_biscuits01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_biscuits01x_group
-        61442 	222488432 	bla_genstore_int 	_s_brandy01x_group
-        61442 	222488432 	bla_genstore_int 	_s_canApricots01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_canApricots01x_group
-        61442 	222488432 	bla_genstore_int 	_s_candyBag01x_red_group
-        61442 	222488432 	bla_genstore_int 	_s_canKidney01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_cankidney01x_group
-        61442 	222488432 	bla_genstore_int 	_s_canPeas01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_canPeas01x_group
-        61442 	222488432 	bla_genstore_int 	_s_cheeseWedge1x_group
-        61442 	222488432 	bla_genstore_int 	_s_chocolateBar02x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_chocolateBar02x_group
-        61442 	222488432 	bla_genstore_int 	_s_coffeeTin01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_coffeeTin01x_group
-        61442 	222488432 	bla_genstore_int 	_s_cornedBeef01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_cornedBeef01x_group
-        61442 	222488432 	bla_genstore_int 	_s_crackers01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_crackers01x_group
-        61442 	222488432 	bla_genstore_int 	_s_cricketTin01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_cricketTin01x_group
-        61442 	222488432 	bla_genstore_int 	_s_gunOil01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_gunOil01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_baitHerb01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_baitherb01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_baitMeat01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_baitmeat01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_gin01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_gin01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_horsePills01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_horsePills01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_rum01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_rum01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_tabacco01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_tabacco01x_group
-        61442 	222488432 	bla_genstore_int 	_s_inv_whiskey01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_inv_whiskey01x_group
-        61442 	222488432 	bla_genstore_int 	_s_oatcakes01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_oatcakes01x_group
-        61442 	222488432 	bla_genstore_int 	_s_peach01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_peach01x_group
-        61442 	222488432 	bla_genstore_int 	_s_saltedbeef01x_group
-        61442 	222488432 	bla_genstore_int 	_s_saltedbeef02x_group
-        61442 	222488432 	bla_genstore_int 	_s_wormCan01x_dressing
-        61442 	222488432 	bla_genstore_int 	_s_wormcan01x_group
-
-	ActivateInteriorEntitySets(61442, "Blackwater general store", {
-		"_p_apple01x_dressing",
-		"_p_apple01x_dressing",
-		"_p_carrots_01x_dressing",
-		"_p_carrots_01x_group",
-		"_p_cigar02x_dressing",
-		"_p_cigar02x_group",
-		"_p_cigarettebox01x_dressing",
-		"_p_cigarettebox01x_group",
-		"_p_int_fishing01_dressing",
-		"_p_tin_pomade01x_dressing",
-		"_p_tin_pomade01x_group",
-		"_p_tin_soap01x_dressing",
-		"_p_tin_soap01x_group",
-		"_s_beardTonic01x_dressing",
-		"_s_beardTonic01x_group",
-		"_s_biscuits01x_dressing",
-		"_s_biscuits01x_group",
-		"_s_brandy01x_group",
-		"_s_canApricots01x_dressing",
-		"_s_canApricots01x_group",
-		"_s_candyBag01x_red_group",
-		"_s_canKidney01x_dressing",
-		"_s_cankidney01x_group",
-		"_s_canPeas01x_dressing",
-		"_s_canPeas01x_group",
-		"_s_cheeseWedge1x_group",
-		"_s_chocolateBar02x_dressing",
-		"_s_chocolateBar02x_group",
-		"_s_coffeeTin01x_dressing",
-		"_s_coffeeTin01x_group",
-		"_s_cornedBeef01x_dressing",
-		"_s_cornedBeef01x_group",
-		"_s_crackers01x_dressing",
-		"_s_crackers01x_group",
-		"_s_cricketTin01x_dressing",
-		"_s_cricketTin01x_group",
-		"_s_gunOil01x_dressing",
-		"_s_gunOil01x_group",
-		"_s_inv_baitHerb01x_dressing",
-		"_s_inv_baitherb01x_group",
-		"_s_inv_baitMeat01x_dressing",
-		"_s_inv_baitmeat01x_group",
-		"_s_inv_gin01x_dressing",
-		"_s_inv_gin01x_group",
-		"_s_inv_horsePills01x_dressing",
-		"_s_inv_horsePills01x_group",
-		"_s_inv_rum01x_dressing",
-		"_s_inv_rum01x_group",
-		"_s_inv_tabacco01x_dressing",
-		"_s_inv_tabacco01x_group",
-		"_s_inv_whiskey01x_dressing",
-		"_s_inv_whiskey01x_group",
-		"_s_oatcakes01x_dressing",
-		"_s_oatcakes01x_group",
-		"_s_peach01x_dressing",
-		"_s_peach01x_group",
-		"_s_saltedbeef01x_group",
-		"_s_saltedbeef02x_group",
-		"_s_wormCan01x_dressing",
-		"_s_wormcan01x_group"
-	})
+    [61442] = {x=-782.50006103516,y=-1324.0,z=44.0,typeHashId=222488432,typeHashName="bla_genstore_int",rpf="bla_genstore_int.rpf"},
+        61442 	222488432 	bla_genstore_int 	_p_apple01x_dressing 
+    ActivateInteriorEntitySet(interior, "_________________")   
+    bla_generalstore01x_em.ydr
+    bla_generalstore01x.ydr
+    bla_generalstore01x+hidr.ytd
+    bla_generalstoredecals01x.ydr
+--]]
+  
     local interior = GetInteriorAtCoords(x, y, z) 
-    ActivateInteriorEntitySet(interior, "_________________")       
-    if Config.Unknow == true then  
-        ActivateInteriorEntitySet(interior, "_________________")         
-    end   
-    --]]
-end
+    ActivateInteriorEntitySet(interior, "bla_genstore_int") 
+    ActivateInteriorEntitySet(interior, "bla_generalstoredecals01x") 
+    ActivateInteriorEntitySet(interior, "bla_generalstore01x_em") 
+    ActivateInteriorEntitySet(interior, "bla_generalstore01x") 
+    ActivateInteriorEntitySet(interior, "bla_generalstore01x+hidr") 
+    for key, item_set in pairs(item_sets) do
+        ActivateInteriorEntitySet(interior, item_set)     
+    end 
+end 
 
 -- currently there are two hitching posts. 
 
@@ -160,6 +48,16 @@ function DisableResourcesINTERIORS(x, y, z)
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
     --]]       
+  
+    local interior = GetInteriorAtCoords(x, y, z) 
+    DeactivateInteriorEntitySet(interior, "bla_genstore_int") 
+    DeactivateInteriorEntitySet(interior, "bla_generalstoredecals01x") 
+    DeactivateInteriorEntitySet(interior, "bla_generalstore01x_em") 
+    DeactivateInteriorEntitySet(interior, "bla_generalstore01x") 
+    DeactivateInteriorEntitySet(interior, "bla_generalstore01x+hidr")
+    for key, item_set in pairs(item_sets) do
+        DeactivateInteriorEntitySet(interior, item_set)     
+    end 
 end    
  
  

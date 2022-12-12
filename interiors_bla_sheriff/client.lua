@@ -23,6 +23,11 @@ function EnableResouresINTERIORS(x, y, z)
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
     --]]
+    local interior = GetInteriorAtCoords(x, y, z) 
+    ActivateInteriorEntitySet(interior, "bla_sheriff_ext")   
+    ActivateInteriorEntitySet(interior, "bla_sheriff_ext+hidr")  
+    ActivateInteriorEntitySet(interior, "bla_sheriff_decal_01")    
+    ActivateInteriorEntitySet(interior, "bla_jail_int")     
 end
 
 -- currently there are two hitching posts. 
@@ -39,7 +44,26 @@ function DisableResourcesINTERIORS(x, y, z)
     local interior = GetInteriorAtCoords(x, y, z)    
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
-    --]]       
+    
+bla_sheriff_decal_01.ydr
+bla_sheriff_ext.ydr
+bla_sheriff_ext+hidr.ytd
+
+bla_policeglue_01.ydr
+bla_policescafold01x.ydr
+bla_policestation01x.ydr
+bla_policestation01x+hidr.ytd
+    --]]    
+    local interior = GetInteriorAtCoords(x, y, z) 
+    DeactivateInteriorEntitySet(interior, "bla_sheriff_ext")   
+    DeactivateInteriorEntitySet(interior, "bla_sheriff_ext+hidr")  
+    DeactivateInteriorEntitySet(interior, "bla_sheriff_decal_01")    
+    DeactivateInteriorEntitySet(interior, "bla_jail_int")  
+
+    DeactivateInteriorEntitySet(interior, "bla_policeglue_01") 
+    DeactivateInteriorEntitySet(interior, "bla_policescafold01x") 
+    DeactivateInteriorEntitySet(interior, "bla_policestation01x")  
+    DeactivateInteriorEntitySet(interior, "bla_policestation01x+hidr")  
 end    
  
  

@@ -4,7 +4,7 @@ local character_selected = false
 
 ----------- turn on the bar ------
 function EnableResouresIMAP()            
-    --[[ 	[68354] = {x=-870.76177978516,y=-1288.9918212891,z=41.398983001709,typeHashId=619853493,typeHashName="bla_fenceshop_int",rpf="bla_fenceshop_int.rpf"},
+    --[[ 	
     if Config.Unknow == true then
         RequestImap(_________________) -- Something relating to BizTemplate
     end     
@@ -13,12 +13,15 @@ end
 
 function EnableResouresINTERIORS(x, y, z)     
     --[[
+[68354] = {x=-870.76177978516,y=-1288.9918212891,z=41.398983001709,typeHashId=619853493,typeHashName="bla_fenceshop_int",rpf="bla_fenceshop_int.rpf"},        
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "_________________")       
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
-    --]]
+    --]]    
+    local interior = GetInteriorAtCoords(x, y, z) 
+    ActivateInteriorEntitySet(interior, "bla_fenceshop_int")    
 end
 
 -- currently there are two hitching posts. 
@@ -36,6 +39,8 @@ function DisableResourcesINTERIORS(x, y, z)
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
     --]]       
+    local interior = GetInteriorAtCoords(x, y, z) 
+    DeactivateInteriorEntitySet(interior, "bla_fenceshop_int")    
 end    
  
  

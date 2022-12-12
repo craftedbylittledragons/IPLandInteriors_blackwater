@@ -9,7 +9,8 @@ function EnableResouresIMAP()
 
     if Config.Unknow == true then
         RequestImap(_________________) -- Something relating to BizTemplate
-    end     
+    end 
+    ------------ changing room needs a telepoter?, transition between room and main store does not work. even if door works.    
     --]] 
 end
 
@@ -20,7 +21,18 @@ function EnableResouresINTERIORS(x, y, z)
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
-    --]]
+        
+    bla_tailor01x_decal.ydr
+    bla_tailor01x_em.ydr
+    bla_tailor01x.ydr
+    bla_tailor01x+hidr.ytd
+    --]] 
+    local interior = GetInteriorAtCoords(x, y, z) 
+    ActivateInteriorEntitySet(interior, "bla_tailor_int")
+    ActivateInteriorEntitySet(interior, "bla_tailor01x_em") 
+    ActivateInteriorEntitySet(interior, "bla_tailor01x_decal") 
+    ActivateInteriorEntitySet(interior, "bla_tailor01x") 
+    ActivateInteriorEntitySet(interior, "bla_tailor01x+hidr")  
 end
 
 -- currently there are two hitching posts. 
@@ -37,7 +49,13 @@ function DisableResourcesINTERIORS(x, y, z)
     local interior = GetInteriorAtCoords(x, y, z)    
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
-    --]]       
+    --]]   
+    local interior = GetInteriorAtCoords(x, y, z) 
+    DeactivateInteriorEntitySet(interior, "bla_tailor_int")
+    DeactivateInteriorEntitySet(interior, "bla_tailor01x_em") 
+    DeactivateInteriorEntitySet(interior, "bla_tailor01x_decal") 
+    DeactivateInteriorEntitySet(interior, "bla_tailor01x") 
+    DeactivateInteriorEntitySet(interior, "bla_tailor01x+hidr")      
 end    
  
  

@@ -9,21 +9,51 @@ function EnableResouresIMAP()
         RequestImap(_________________) -- Something relating to BizTemplate
     end     
     --]] 
+    RequestImap(1858796535)    -- West Elizabeth -- Blackwater -- Fast Travel
+    --RequestImap(1490756544)    -- West Elizabeth -- Blackwater -- Crates & Barrels on Streets
+    --RequestImap(-677362237)    -- West Elizabeth -- Blackwater -- Wreckage near bards crossing
+ 
+    for key, table in pairs(sets) do
+        if sets[key]["type"] == "ymap" then 
+            if sets[key]["engage"] == true then 
+                hash_key = GetHashKey(sets[key]["name"])
+                RequestImap(hash_key)  
+                print("I: ",sets[key]["name"], hash_key, sets[key]["type"], sets[key]["desc"])
+                Citizen.Wait(200)
+            end 
+        end 
+    end  
+
 end
 
 function EnableResouresINTERIORS(x, y, z)     
-    --[[
- 
-RemoveImap(1858796535)    -- West Elizabeth -- Blackwater -- Fast Travel
-RemoveImap(1490756544)    -- West Elizabeth -- Blackwater -- Crates & Barrels on Streets
-RemoveImap(-677362237)    -- West Elizabeth -- Blackwater -- Wreckage near bards crossing
-
+    --[[  
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "_________________")       
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
     --]]
+    local interior = GetInteriorAtCoords(x, y, z) 
+    for key, table in pairs(sets) do
+        if sets[key]["type"] == "ydr" then 
+            if sets[key]["engage"] == true then 
+                ActivateInteriorEntitySet(interior, sets[key]["name"] )  
+                print("A: ",sets[key]["name"], sets[key]["type"], sets[key]["desc"])
+                Citizen.Wait(200)
+            end 
+        end 
+    end       
+    local interior = GetInteriorAtCoords(x, y, z) 
+    for key, table in pairs(sets) do
+        if sets[key]["type"] == "ytd" then 
+            if sets[key]["engage"] == true then 
+                ActivateInteriorEntitySet(interior, sets[key]["name"] )  
+                print("A: ",sets[key]["name"], sets[key]["type"], sets[key]["desc"])
+                Citizen.Wait(200)
+            end 
+        end 
+    end  
 end
 
 -- currently there are two hitching posts. 
@@ -31,8 +61,20 @@ end
 ----------- turn off the bar ------
 function DisableResourcesIMAPS() 
     --[[
-    RemoveImap(6666_________________17953) -- Something relating to BizTemplate  
-    --]]  
+    RemoveImap(_________________) -- Something relating to BizTemplate  
+    --]]      
+    RemoveImap(1858796535)    -- West Elizabeth -- Blackwater -- Fast Travel
+    RemoveImap(1490756544)    -- West Elizabeth -- Blackwater -- Crates & Barrels on Streets
+    RemoveImap(-677362237)    -- West Elizabeth -- Blackwater -- Wreckage near bards crossing
+    
+    for key, table in pairs(sets) do
+        if sets[key]["type"] == "ymap" then  
+            hash_key = GetHashKey(sets[key]["name"])
+            RemoveImap(hash_key)  
+            print("R: ",sets[key]["name"], hash_key, sets[key]["type"], sets[key]["desc"]) 
+            Citizen.Wait(200)
+        end 
+    end  
 end
 
 function DisableResourcesINTERIORS(x, y, z)  
@@ -40,7 +82,23 @@ function DisableResourcesINTERIORS(x, y, z)
     local interior = GetInteriorAtCoords(x, y, z)    
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
-    --]]       
+    --]]         
+    local interior = GetInteriorAtCoords(x, y, z) 
+    for key, table in pairs(sets) do
+        if sets[key]["type"] == "ydr" then   
+            DeactivateInteriorEntitySet(interior, sets[key]["name"] )  
+            print("D: ",sets[key]["name"], sets[key]["type"], sets[key]["desc"]) 
+            Citizen.Wait(200)
+        end 
+    end      
+    local interior = GetInteriorAtCoords(x, y, z) 
+    for key, table in pairs(sets) do
+        if sets[key]["type"] == "ytd" then   
+            DeactivateInteriorEntitySet(interior, sets[key]["name"] )  
+            print("D: ",sets[key]["name"], sets[key]["type"], sets[key]["desc"]) 
+            Citizen.Wait(200)
+        end 
+    end  
 end    
  
  

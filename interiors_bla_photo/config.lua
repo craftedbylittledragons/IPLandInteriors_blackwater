@@ -12,9 +12,9 @@ Config.Debris = false
  
 
 Config.Label = "BizTemplate"
-Config.x = -309.288
-Config.y = 808.374
-Config.z = 119.187   
+Config.x = -814.03784179688
+Config.y = -1374.2679443359
+Config.z = 42.323146820068  
  
 Config.door_hash_v1 = {
     ----Valentine 

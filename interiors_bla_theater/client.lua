@@ -5,7 +5,7 @@ local character_selected = false
 ----------- turn on the bar ------
 function EnableResouresIMAP()            
     --[[ 
-	[26370] = {x=-778.00006103516,y=-1362.0,z=44.000003814697,typeHashId=-1330027216,typeHashName="bla_theater_int",rpf="bla_theater_int.rpf"},
+	
     if Config.Unknow == true then
         RequestImap(_________________) -- Something relating to BizTemplate
     end     
@@ -14,12 +14,28 @@ end
 
 function EnableResouresINTERIORS(x, y, z)     
     --[[
+[26370] = {x=-778.00006103516,y=-1362.0,z=44.000003814697,typeHashId=-1330027216,typeHashName="bla_theater_int",rpf="bla_theater_int.rpf"},
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "_________________")       
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
+    
+    bla_theater_bulbs_holder.ydr
+    bla_theater_decal.ydr
+    bla_theater_ext_em.ydr
+    bla_theater_ext.ydr
+    bla_theater_ext+hidr.ytd
+    bla_theatre_signs.ydr
     --]]
+    local interior = GetInteriorAtCoords(x, y, z) 
+    ActivateInteriorEntitySet(interior, "bla_theater_int")   
+    ActivateInteriorEntitySet(interior, "bla_theater_bulbs_holder")   
+    ActivateInteriorEntitySet(interior, "bla_theater_decal")   
+    ActivateInteriorEntitySet(interior, "bla_theater_ext_em")   
+    ActivateInteriorEntitySet(interior, "bla_theater_ext")   
+    ActivateInteriorEntitySet(interior, "bla_theater_ext+hidr")   
+    ActivateInteriorEntitySet(interior, "bla_theatre_signs")   
 end
 
 -- currently there are two hitching posts. 
@@ -37,6 +53,14 @@ function DisableResourcesINTERIORS(x, y, z)
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
     --]]       
+    local interior = GetInteriorAtCoords(x, y, z)  
+    DeactivateInteriorEntitySet(interior, "bla_theater_int")   
+    DeactivateInteriorEntitySet(interior, "bla_theater_bulbs_holder")   
+    DeactivateInteriorEntitySet(interior, "bla_theater_decal")   
+    DeactivateInteriorEntitySet(interior, "bla_theater_ext_em")   
+    DeactivateInteriorEntitySet(interior, "bla_theater_ext")   
+    DeactivateInteriorEntitySet(interior, "bla_theater_ext+hidr")   
+    DeactivateInteriorEntitySet(interior, "bla_theatre_signs")   
 end    
  
  

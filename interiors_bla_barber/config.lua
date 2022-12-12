@@ -10,9 +10,9 @@ Config.Unknown = true
  
 
 Config.Label = "BizTemplate"
-Config.x = -309.288
-Config.y = 808.374
-Config.z = 119.187   
+Config.x = -846.36
+Config.y = -1321.8
+Config.z = 43.14    
  
 Config.door_hash_v1 = {
     ----Valentine 
