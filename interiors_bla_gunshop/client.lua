@@ -9,27 +9,25 @@ function EnableResouresIMAP()
         RequestImap(_________________) -- Something relating to BizTemplate
     end     
     --]] 
+    RequestImap(-501793326) -- construction
 end
 
 function EnableResouresINTERIORS(x, y, z)     
     --[[
-   local interior = GetInteriorAtCoords(x, y, z) 
+[68354] = {x=-870.76177978516,y=-1288.9918212891,z=41.398983001709,typeHashId=619853493,typeHashName="bla_fenceshop_int",rpf="bla_fenceshop_int.rpf"},        
+    local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "_________________")       
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         
     end   
-    bla_blacksmith.ydr
-    bla_blacksmith+hidr.ytd
-    bla_blacksmith01_d.ydr
-    bla_blacksmith01_d+hidr.ytd
-    bla_blacksmith01_em.ydr
     --]]    
-    local interior = GetInteriorAtCoords(x, y, z) 
-    ActivateInteriorEntitySet(interior, "bla_blacksmith")   
-    ActivateInteriorEntitySet(interior, "bla_blacksmith+hidr")   
-    ActivateInteriorEntitySet(interior, "bla_blacksmith01_d")   
-    ActivateInteriorEntitySet(interior, "bla_blacksmith01_d+hidr") 
-    ActivateInteriorEntitySet(interior, "bla_blacksmith01_em")    
+    local interior = GetInteriorAtCoords(x, y, z)  
+    if Config.Construction == true then 
+        ActivateInteriorEntitySet(interior, "bla_construction_slod")  
+        ActivateInteriorEntitySet(interior, "bla_construction+hidr") 
+        ActivateInteriorEntitySet(interior, "bla_construction")   
+        ActivateInteriorEntitySet(interior, "bla_construction_slod_children")   -- ydd
+    end   
 end
 
 -- currently there are two hitching posts. 
@@ -39,6 +37,7 @@ function DisableResourcesIMAPS()
     --[[
     RemoveImap(6666_________________17953) -- Something relating to BizTemplate  
     --]]  
+    RemoveImap(-501793326) -- construction
 end
 
 function DisableResourcesINTERIORS(x, y, z)  
@@ -47,12 +46,11 @@ function DisableResourcesINTERIORS(x, y, z)
     DeactivateInteriorEntitySet(interior, "_________________")     
     DeactivateInteriorEntitySet(interior, "_________________")  
     --]]       
-    local interior = GetInteriorAtCoords(x, y, z) 
-    DeactivateInteriorEntitySet(interior, "bla_blacksmith")   
-    DeactivateInteriorEntitySet(interior, "bla_blacksmith+hidr")   
-    DeactivateInteriorEntitySet(interior, "bla_blacksmith01_d")   
-    DeactivateInteriorEntitySet(interior, "bla_blacksmith01_d+hidr") 
-    DeactivateInteriorEntitySet(interior, "bla_blacksmith01_em")       
+    local interior = GetInteriorAtCoords(x, y, z)  
+    DeactivateInteriorEntitySet(interior, "bla_construction_slod")  
+    DeactivateInteriorEntitySet(interior, "bla_construction+hidr") 
+    DeactivateInteriorEntitySet(interior, "bla_construction")   
+    DeactivateInteriorEntitySet(interior, "bla_construction_slod_children")   -- ydd 
 end    
  
  

@@ -11,19 +11,58 @@ function EnableResouresIMAP()
     --]] 
 end
 
-function EnableResouresINTERIORS(x, y, z)     
+function EnableResouresINTERIORS(x, y, z)  
+    x=-814.03784179688
+    y=-1374.2679443359
+    z=42.323146820068       
     --[[
-
 	[12546] = {x=-814.03784179688,y=-1374.2679443359,z=42.323146820068,typeHashId=-658231316,typeHashName="bla_photo_int",rpf="bla_photo_int.rpf"},        
     
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "_________________")       
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         
-    end   
+    end    
+    _manifest.ymf
+    _cache.ych
+    q_reflector01.ydr
+    hi@bla_photo_int.ybn
+    bla_photo_lightboxportrait.ydr
+    bla_photo_lightbox01.ydr
+    bla_photo_int_shell.ydr
+    bla_photo_int_shell+hidr.ytd
+    bla_photo_int_shadowproxy.ydr
+    bla_photo_int_ref.ydr
+    bla_photo_int_ref+hidr.ytd
+    bla_photo_int_props01.ydr
+    bla_photo_int_props01+hidr.ytd
+    bla_photo_int_gears.ydr
+    bla_photo_int_gears+hidr.ytd
+    bla_photo_int_decal01.ydr
+    bla_photo_int_decal01+hidr.ytd
+    bla_photo_int.ytyp
+    bla_photo_int.ytd
+    bla_photo_int.ybn
+    bla_photo_int+hi.ytd
     --]]
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "bla_photo_int")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int+hi.")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_decal01+hidr")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_decal01")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_gears+hidr")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_gears")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_props01+hidr")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_props01")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_shadowproxy")      
+    ActivateInteriorEntitySet(interior, "bla_photo_int_ref+hidr")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_ref")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_shell+hidr")  
+    ActivateInteriorEntitySet(interior, "bla_photo_int_shell")      
+    ActivateInteriorEntitySet(interior, "bla_photo_lightbox01")  
+    ActivateInteriorEntitySet(interior, "bla_photo_lightboxportrait")  
+    ActivateInteriorEntitySet(interior, "hi@bla_photo_in")  
+    ActivateInteriorEntitySet(interior, "q_reflector01") 
 end
 
 -- currently there are two hitching posts. 
@@ -31,7 +70,7 @@ end
 ----------- turn off the bar ------
 function DisableResourcesIMAPS() 
     --[[
-    RemoveImap(6666_________________17953) -- Something relating to BizTemplate  
+    RemoveImap(_________________) -- Something relating to BizTemplate  
     --]]  
 end
 
@@ -42,7 +81,23 @@ function DisableResourcesINTERIORS(x, y, z)
     DeactivateInteriorEntitySet(interior, "_________________")  
     --]]       
     local interior = GetInteriorAtCoords(x, y, z) 
-    DeactivateInteriorEntitySet(interior, "bla_photo_int")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int")   
+    DeactivateInteriorEntitySet(interior, "bla_photo_int+hi.")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_decal01+hidr")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_decal01")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_gears+hidr")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_gears")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_props01+hidr")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_props01")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_shadowproxy")      
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_ref+hidr")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_ref")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_shell+hidr")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_int_shell")      
+    DeactivateInteriorEntitySet(interior, "bla_photo_lightbox01")  
+    DeactivateInteriorEntitySet(interior, "bla_photo_lightboxportrait")  
+    DeactivateInteriorEntitySet(interior, "hi@bla_photo_in")  
+    DeactivateInteriorEntitySet(interior, "q_reflector01")     
 end    
  
  

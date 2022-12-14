@@ -335,9 +335,7 @@ sets = {
     {name = "bla_awningcloth01", type="yft", engage=true, desc=""},   
     {name = "bla_awningcloth01+hifr", type="ytd", engage=true, desc=""},   
      
-    {name = "bla_chicken_decal", type="ydr", engage=true, desc=""},
-    {name = "bla_construction_slod", type="ydr", engage=false, desc=""},
-    {name = "bla_construction", type="ydr", engage=false, desc=""},
+    {name = "bla_chicken_decal", type="ydr", engage=true, desc=""}, 
     
     {name = "bla_corner02_em", type="ydr", engage=true, desc=""},
     {name = "bla_corner02", type="ydr", engage=true, desc=""},

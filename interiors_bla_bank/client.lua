@@ -9,6 +9,7 @@ function EnableResouresIMAP()
         RequestImap(_________________) -- Something relating to BizTemplate
     end     
     --]] 
+    RequestImap(-5339556)     -- West Elizabeth -- Blackwater -- New Bank Under Construction
 end
 
 function EnableResouresINTERIORS(x, y, z)     
@@ -63,7 +64,7 @@ function EnableResouresINTERIORS(x, y, z)
             ActivateInteriorEntitySet(interior, "bla_bankscafold")  
             ActivateInteriorEntitySet(interior, "bla_bankscafold+hidr")    
         end        
-    end  
+    end     
 end
 
 -- currently there are two hitching posts. 
@@ -71,8 +72,9 @@ end
 ----------- turn off the bar ------
 function DisableResourcesIMAPS() 
     --[[
-    RemoveImap(6666_________________17953) -- Something relating to BizTemplate  
+    RemoveImap(_________________) -- Something relating to BizTemplate  
     --]]  
+    RemoveImap(-5339556)     -- West Elizabeth -- Blackwater -- New Bank Under Construction
 end
 
 function DisableResourcesINTERIORS(x, y, z)  

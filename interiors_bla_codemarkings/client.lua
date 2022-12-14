@@ -13,8 +13,7 @@ end
 
 function EnableResouresINTERIORS(x, y, z)     
     --[[
-[68354] = {x=-870.76177978516,y=-1288.9918212891,z=41.398983001709,typeHashId=619853493,typeHashName="bla_fenceshop_int",rpf="bla_fenceshop_int.rpf"},        
-    local interior = GetInteriorAtCoords(x, y, z) 
+   local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "_________________")       
     if Config.Unknow == true then  
         ActivateInteriorEntitySet(interior, "_________________")         

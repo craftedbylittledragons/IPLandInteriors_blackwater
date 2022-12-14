@@ -11,33 +11,36 @@ function EnableResouresIMAP()
     --]] --## Blackwater ##--
     if Config.Construction == true then 
         -- Town Hall
-        if Config.extras == false then 
+        if Config.extras == true then 
             RequestImap(1343343014)   -- West Elizabeth -- Blackwater -- Town Hall -- Addons Construction
             RequestImap(739412171)    -- West Elizabeth -- Blackwater -- Town Hall -- Two Boards in front of city hall (Goes with Town Hall Construction)
             RequestImap(1173561253)   -- West Elizabeth -- Blackwater -- Town Hall -- Tents Beside City Hall Near Trech
+            RequestImap(1490756544)     -- crates on main st   
         end 
-        -- Bank
-        RequestImap(-5339556)     -- West Elizabeth -- Blackwater -- Town Hall -- Bank Under Construction
-        RequestImap(-2082201137)  -- West Elizabeth -- Blackwater -- Town Hall -- Ground        
-        RequestImap(-501793326) -- construction
-        RequestImap(1490756544) -- crates on main st    
-    else
-        RequestImap(-2082201137)  --Blackwater Ground Town Hall
+        -- Ground
+        RequestImap(-2082201137)  -- West Elizabeth -- Blackwater -- Town Hall -- Ground     
+        RequestImap(-2082201137)  --Blackwater Ground Town Hall   
+    else 
         RequestImap(1470738186) -- West Elizabeth -- Blackwater -- Town Hall -- Adds Town Hall Pre-Construcion Ground (Ground does not mesh well with contrustion IPLs)
         RequestImap(-1632348233)-- West Elizabeth -- Blackwater -- Town Hall -- Adds Trees and Grass (DO NOT USE WITH CONSTRUCTION IPL, WILL MERGE VISUALS)
     end 
      
     ------------------------------------- Blackwater Town Hall   
-    RequestImap(1641449717)
-    RequestImap(1258244391) -- something 
-    RequestImap(-753454183) -- trapper
-    RequestImap(-1854368742) -- trapper
-    RequestImap(466168676)
-    RequestImap(411846009)
-    RequestImap(-393583941)
-    RequestImap(-636161219)     
-    ------------------------------------- #### END OF BLACKWATER TOWN HALL ####
-
+    --RequestImap(1641449717)
+    --RequestImap(1258244391) -- something  
+    --RequestImap(466168676)
+    --RequestImap(411846009)
+    --RequestImap(-393583941)
+    --RequestImap(-636161219)         
+    ------------------------------------- #### END OF BLACKWATER TOWN HALL ####KWATER TOWN HALL ####
+    if Config.Gunshop == true then 
+        RequestImap(-501793326)     -- gunshop across for forman of construction -- under constructions        
+        RequestImap(GetHashKey("new_com_07_interior_new_gunshop_int_milo_")) -- new_com_07_interior_new_gunshop_int_milo_.ymap
+    end 
+    if Config.Trapper == true then 
+        RequestImap(-753454183) -- trapper
+        RequestImap(-1854368742) -- trapper
+    end 
 end
 
 function EnableResouresINTERIORS(x, y, z)     
@@ -78,32 +81,42 @@ function EnableResouresINTERIORS(x, y, z)
     bla_civic.ytd
     --]]
      local interior = GetInteriorAtCoords(x, y, z) 
-     ActivateInteriorEntitySet(interior, "bla_cityhall_glue")   
-     ActivateInteriorEntitySet(interior, "bla_cityhall_glue+hidr")   
-     ActivateInteriorEntitySet(interior, "bla_cityhall_pipes")   
-     ActivateInteriorEntitySet(interior, "bla_cityhall01x")   
-     ActivateInteriorEntitySet(interior, "bla_cityhall01x+hidr")   
-     ActivateInteriorEntitySet(interior, "bla_cityhallbricks")   
-
-     ActivateInteriorEntitySet(interior, "bla_civic_endsum_txd")   
-     ActivateInteriorEntitySet(interior, "bla_civic_endsum_txd+hidr") 
-     ActivateInteriorEntitySet(interior, "bla_civic_fence_glu_01")    
-     ActivateInteriorEntitySet(interior, "bla_civic_fence_glue02.ydr")    
-     ActivateInteriorEntitySet(interior, "bla_civic_fence")    
-     ActivateInteriorEntitySet(interior, "bla_civic_fence+hidr") 
-
-     if Config.Construction == true then  
+     if Config.CityHall == true then 
+        ActivateInteriorEntitySet(interior, "bla_cityhall_glue")   
+        ActivateInteriorEntitySet(interior, "bla_cityhall_glue+hidr")   
+        ActivateInteriorEntitySet(interior, "bla_cityhall_pipes")   
+        ActivateInteriorEntitySet(interior, "bla_cityhall01x")   
+        ActivateInteriorEntitySet(interior, "bla_cityhall01x+hidr")   
+        ActivateInteriorEntitySet(interior, "bla_cityhallbricks")  
+    end 
+      
+     if Config.Civic == true then  
+        ActivateInteriorEntitySet(interior, "bla_civic_endsum_txd")   
+        ActivateInteriorEntitySet(interior, "bla_civic_endsum_txd+hidr") 
+        ActivateInteriorEntitySet(interior, "bla_civic")  
+    end 
+      
+     if Config.Fence == true then 
+        ActivateInteriorEntitySet(interior, "bla_civic_fence_glu_01")    
+        ActivateInteriorEntitySet(interior, "bla_civic_fence_glue02.ydr")    
+        ActivateInteriorEntitySet(interior, "bla_civic_fence")    
+        ActivateInteriorEntitySet(interior, "bla_civic_fence+hidr") 
         ActivateInteriorEntitySet(interior, "bla_civic_fence2")  
-        ActivateInteriorEntitySet(interior, "bla_civic_fence2+hidr")   
+        ActivateInteriorEntitySet(interior, "bla_civic_fence2+hidr") 
+     end 
+
+     if Config.Forman == true then     
         ActivateInteriorEntitySet(interior, "bla_civic_fman_decal01")   
         ActivateInteriorEntitySet(interior, "bla_civic_fman_decal01+hidr")  
         ActivateInteriorEntitySet(interior, "bla_civic_fman01")   
-        ActivateInteriorEntitySet(interior, "bla_civic_fman01+hidr")  
-        ActivateInteriorEntitySet(interior, "bla_civic_woodplanks_00")   
-        ActivateInteriorEntitySet(interior, "bla_civic_woodplanks_00+hidr")    
+        ActivateInteriorEntitySet(interior, "bla_civic_fman01+hidr")      
     end 
 
-     ActivateInteriorEntitySet(interior, "bla_civic") 
+    if Config.extras == true then 
+        ActivateInteriorEntitySet(interior, "bla_civic_woodplanks_00")   
+        ActivateInteriorEntitySet(interior, "bla_civic_woodplanks_00+hidr") 
+    end 
+
      if Config.Debris == true then    
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_00")    
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_01")    
@@ -111,6 +124,12 @@ function EnableResouresINTERIORS(x, y, z)
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_03")   
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_txd")     
      end 
+     if Config.Construction == true then 
+         ActivateInteriorEntitySet(interior, "bla_construction_slod")  
+         ActivateInteriorEntitySet(interior, "bla_construction+hidr") 
+         ActivateInteriorEntitySet(interior, "bla_construction")   
+         ActivateInteriorEntitySet(interior, "bla_construction_slod_children")   -- ydd
+     end   
 end
 
 -- currently there are two hitching posts. 
@@ -123,8 +142,7 @@ function DisableResourcesIMAPS()
     ------------------------------------- Blackwater Town Hall  
     RemoveImap(-2082201137)  -- West Elizabeth -- Blackwater -- Town Hall -- Ground
     RemoveImap(1343343014)   -- West Elizabeth -- Blackwater -- Town Hall -- Addons Construction
-    RemoveImap(739412171)    -- West Elizabeth -- Blackwater -- Town Hall -- Two Boards in front of city hall (Goes with Town Hall Construction)
-    RemoveImap(-5339556)     -- West Elizabeth -- Blackwater -- Town Hall -- Bank Under Construction
+    RemoveImap(739412171)    -- West Elizabeth -- Blackwater -- Town Hall -- Two Boards in front of city hall (Goes with Town Hall Construction)    
     RemoveImap(1173561253) -- West Elizabeth -- Blackwater -- Town Hall -- Tents Beside City Hall Near Trech
     RemoveImap(1470738186) -- West Elizabeth -- Blackwater -- Town Hall -- Adds Town Hall Pre-Construcion Ground (Ground does not mesh well with contrustion IPLs)
     RemoveImap(-1632348233)-- West Elizabeth -- Blackwater -- Town Hall -- Adds Trees and Grass (DO NOT USE WITH CONSTRUCTION IPL, WILL MERGE VISUALS)

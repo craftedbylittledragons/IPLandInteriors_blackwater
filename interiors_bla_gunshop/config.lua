@@ -6,11 +6,7 @@ Config.TeleportME = true -- For testing set to false for live server
 Config.Unknown = true  
  
 -- ipl 
-Config.Unknown = true 
-Config.Bank = true 
-Config.NewBank = true 
-Config.NewBankConstruction = false 
-Config.Construction = false 
+Config.Unknown = true  
  
 
 Config.Label = "BizTemplate"
@@ -18,18 +14,19 @@ Config.x = -846.36
 Config.y = -1321.8
 Config.z = 43.14     
  
-Config.door_hash_v1 = {   
-    --[[
-        3798786,    
-        3459074,
-    --]]
+Config.door_hash_v1 = { 
+--[[
+    3798786,    
+    3459074,
+--]]
+ 
 }
 
 Config.door_hash_v2 = {
-    --[[
+--[[
     [3798786] = {3798786,-542955242,"p_door04x",-322.7286, 767.2573, 121.7059},  -- "Name": "Room 2A", // Valentine
     [3459074] = {3459074,-542955242,"p_door04x",-321.5221, 762.2973, 121.6815},  -- "Name": "Room 2B", // Valentine
-    --]]
+--]]
 }  
 
 --------------------------------------------------

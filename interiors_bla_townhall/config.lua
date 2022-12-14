@@ -3,11 +3,18 @@ Config.Commands = true  -- For testing set to false for live server
 Config.TeleportME = true -- For testing set to false for live server
 
 -- imap and ipls
+Config.CityHall = true 
+Config.Civic = true 
 Config.Construction = true 
+
+Config.Unknown = true 
+
 Config.extras = false 
 Config.Debris = false  
-Config.Unknown = true 
-   
+Config.Fence = false
+Config.Forman = false
+Config.Trapper = true
+Config.Gunshop = true   
 
 Config.Label = "BizTemplate"
 Config.x = -846.36
