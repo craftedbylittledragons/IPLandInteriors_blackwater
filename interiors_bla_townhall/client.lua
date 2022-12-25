@@ -123,13 +123,7 @@ function EnableResouresINTERIORS(x, y, z)
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_02")    
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_03")   
         ActivateInteriorEntitySet(interior, "bla_civic_props_debris_txd")     
-     end 
-     if Config.Construction == true then 
-         ActivateInteriorEntitySet(interior, "bla_construction_slod")  
-         ActivateInteriorEntitySet(interior, "bla_construction+hidr") 
-         ActivateInteriorEntitySet(interior, "bla_construction")   
-         ActivateInteriorEntitySet(interior, "bla_construction_slod_children")   -- ydd
-     end   
+     end  
 end
 
 -- currently there are two hitching posts. 
@@ -148,9 +142,7 @@ function DisableResourcesIMAPS()
     RemoveImap(-1632348233)-- West Elizabeth -- Blackwater -- Town Hall -- Adds Trees and Grass (DO NOT USE WITH CONSTRUCTION IPL, WILL MERGE VISUALS)
     
     ------------------------------------- Blackwater Town Hall   
-    RemoveImap(1641449717)
-    RemoveImap(1258244391) -- something
-    RemoveImap(-501793326) -- construction
+    RemoveImap(1641449717) 
     RemoveImap(1490756544) -- crates on main st
     RemoveImap(-753454183) -- trapper
     RemoveImap(-1854368742) -- trapper

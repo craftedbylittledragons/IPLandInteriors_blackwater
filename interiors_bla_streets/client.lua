@@ -146,8 +146,8 @@ Citizen.CreateThread(function()
     end 
     if character_selected == true and interiorsActive == false then 
         --- cleanup any previous scripts loading content
-        DisableResourcesIMAPS() 
-        DisableResourcesINTERIORS(Config.x, Config.y, Config.z)
+        --DisableResourcesIMAPS() 
+        --DisableResourcesINTERIORS(Config.x, Config.y, Config.z)
 
         -- basically run once after character has loadded in  
         EnableResouresIMAP() 

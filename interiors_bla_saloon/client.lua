@@ -25,7 +25,57 @@ function EnableResouresINTERIORS(x, y, z)
     --]]
     local interior = GetInteriorAtCoords(x, y, z) 
     ActivateInteriorEntitySet(interior, "bla_saloon_int")        
-    ActivateInteriorEntitySet(interior, "bla_saloon_sadie5setdressing")    
+    ActivateInteriorEntitySet(interior, "bla_saloon_sadie5setdressing")  
+    
+    _manifest.ymf
+    _cache.ych
+    hi@bla_saloon_int.ybn
+    bla_sal_player_mirrorref.ydr
+    bla_sal_int_txd.ytd
+    bla_sal_int_txd+hi.ytd
+    bla_sal_int_shell_txd.ytd
+    bla_sal_int_shell_txd+hi.ytd
+    bla_sal_int_playersrm_detail.ydr
+    bla_sal_int_playersrm_detail+hidr.ytd
+    bla_sal_int_pillar01.ydr
+    bla_sal_int_blackjack001.ydr
+    bla_sal_int_blackjack001+hidr.ytd
+    bla_sal_floor_detail.ydr
+    bla_sal_floor_detail+hidr.ytd
+    bla_sal_decals_bath.ydr
+    bla_sal_decals_bath+hidr.ytd
+    bla_sal_decals_2f.ydr
+    bla_sal_decals_1f.ydr
+    bla_sal_decals_1f+hidr.ytd
+    bla_sal_bath_details02.ydr
+    bla_sal_bath_details02+hidr.ytd
+    bla_saloon_phebooth.ydr
+    bla_saloon_phebooth+hidr.ytd
+    bla_saloon_main_detail.ydr
+    bla_saloon_main_detail+hidr.ytd
+    bla_saloon_lightbox003.ydr
+    bla_saloon_lightbox002.ydr
+    bla_saloon_lightbox001.ydr
+    bla_saloon_int_up_room.ydr
+    bla_saloon_int_shell.ydr
+    bla_saloon_int_shell+hidr.ytd
+    bla_saloon_int_shadowproxy.ydr
+    bla_saloon_int_ref.ydr
+    bla_saloon_int_ref+hidr.ytd
+    bla_saloon_int_player001.ydr
+    bla_saloon_int_player001+hidr.ytd
+    bla_saloon_int_mrr_refln_proxy.ydr
+    bla_saloon_int_mrr_refln_proxy+hidr.ytd
+    bla_saloon_int_mirror.ydr
+    bla_saloon_int_mirror+hidr.ytd
+    bla_saloon_int.ytyp
+    bla_saloon_int.ybn
+    bla_saloon_handrail01.ydr
+    bla_saloon_handrail00.ydr
+    bla_saloon_handrail00+hidr.ytd
+    bla_03_sal08.ydr
+    bla_03_sal08+hidr.ytd
+        
 end
 
 -- currently there are two hitching posts. 
