@@ -3,7 +3,7 @@ local interiorsActive = false
 local character_selected = false 
 
 ----------- turn on the bar ------
-function EnableResouresIMAP()            
+function EnableResouresYMAPS()            
     --[[ 
 
 	[22786] = {x=-875.21392822266,y=-1332.9946289063,z=44.0,typeHashId=-514415655,typeHashName="bla_train_int",rpf="bla_train_int.rpf"},        
@@ -57,7 +57,7 @@ end
 -- currently there are two hitching posts. 
 
 ----------- turn off the bar ------
-function DisableResourcesIMAPS() 
+function DisableResourcesYMAPS() 
     --[[
     RemoveImap(6666_________________17953) -- Something relating to interiors_bla_shoestore  
     --]]      
@@ -102,7 +102,7 @@ end
 AddEventHandler('onResourceStop', function(resource) 
     if resource == GetCurrentResourceName() then     
         -- when resource stops disable them, admin is restarting the script
-        DisableResourcesIMAPS() 
+        DisableResourcesYMAPS() 
         DisableResourcesINTERIORS(Config.x, Config.y, Config.z)
     end
 end)
@@ -114,7 +114,7 @@ AddEventHandler('onResourceStart', function(resource)
     if resource == GetCurrentResourceName() then         
         Citizen.Wait(3000)
         -- interiors loads all of these, so we need to disable them 
-        DisableResourcesIMAPS() 
+        DisableResourcesYMAPS() 
         DisableResourcesINTERIORS(Config.x, Config.y, Config.z)
         Citizen.Wait(3000)        
         -- because the character is already logged in on resource "re"start
@@ -140,11 +140,11 @@ Citizen.CreateThread(function()
     end 
     if character_selected == true and interiorsActive == false then 
         --- cleanup any previous scripts loading content
-        DisableResourcesIMAPS() 
+        DisableResourcesYMAPS() 
         DisableResourcesINTERIORS(Config.x, Config.y, Config.z)
 
         -- basically run once after character has loadded in  
-        EnableResouresIMAP() 
+        EnableResouresYMAPS() 
         EnableResouresINTERIORS(Config.x, Config.y, Config.z)
         interiorsActive = true
         unlockDoors()  
